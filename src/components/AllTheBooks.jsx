@@ -13,25 +13,23 @@ class AllTheBooks extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col xxl={4}>
-            <Card>
-              {Horror.map((book) => {
-                return (
-                  <>
-                    <Card.Img
-                      variant="top"
-                      src={book.img}
-                      className="img-fluid"
-                    />
-                    <Card.Body>
-                      <Card.Title>{book.title}</Card.Title>
-                      <Badge bg="success">{book.price}$</Badge>
-                    </Card.Body>
-                  </>
-                );
-              })}
-            </Card>
-          </Col>
+          {Horror.map((book) => {
+            return (
+              <Col key={book.asin} xxl={4}>
+                <Card>
+                  <Card.Img
+                    variant="top"
+                    src={book.img}
+                    className="img-fluid"
+                  />
+                  <Card.Body>
+                    <Card.Title>{book.title}</Card.Title>
+                    <Badge bg="success">{book.price}$</Badge>
+                  </Card.Body>
+                </Card>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     );

@@ -1,6 +1,6 @@
 const MyFooter = (props) => (
   <footer>
-    <a href="#home">Torna Su</a>
+    <a href="nav">Torna Su</a>
   </footer>
 );
 
